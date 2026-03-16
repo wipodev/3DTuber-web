@@ -290,3 +290,96 @@ footer {
   opacity: 1;
   visibility: visible;
 }
+
+/* Download Section */
+.download-area {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--accent);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.6);
+}
+
+.download-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.download-btn:hover svg {
+  transform: translateY(-1.1px);
+}
+
+.version-info {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  opacity: 0.8;
+}
+
+/* Ajuste mobile para el botón */
+@media (max-width: 768px) {
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Checksum Styles */
+.checksum-wrapper {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px dashed var(--border);
+}
+
+.checksum-label {
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.checksum-value {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  word-break: break-all;
+  max-width: 320px;
+  cursor: help;
+  transition: color 0.3s ease;
+}
+
+.checksum-value:hover {
+  color: var(--text-main);
+}
+
+/* Ajuste para que el área de descarga no se pegue al grid */
+.download-area {
+  margin-bottom: 3rem; /* Reducido un poco para equilibrar */
+}
